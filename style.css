@@ -1,0 +1,216 @@
+:root{
+    --white-color:white;
+    --black-color:black;
+    --blue-color:rgb(50, 50, 216);
+    --red-color:rgb(230, 24, 24);
+    --grey-dark-color:rgb(73, 71, 71);
+    --grey-light-color:rgb(160, 160, 160);
+    /* size */
+    --padding:12px;
+    --avatar-size:36px;
+
+    /* font-size */
+    --font-large:19px;
+    --font-medium:14px;
+    --font-small:12px;
+    --font-micro:10px;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Roboto;
+}
+
+ul, li{
+    list-style: none;
+}
+button, button:focus{
+    border:none;
+    cursor:pointer;
+    outline: none;
+    background-color: var(--white-color);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding:var(--padding);
+    background-color:var(--black-color);
+    color:var(--white-color);
+}
+header .logo{
+    font-size: var(--font-large);
+}
+header .logo i{
+    color: var(--red-color);
+}
+
+header .icorn .fa-search{
+    margin-right:var(--padding);
+}
+
+.player{
+    text-align: center;
+    background-color: var(--black-color);
+    position: sticky;
+    top:0;
+}
+/* vedio */
+.player video{
+    width:100%;
+    height:100%;
+    max-width: 1000px;
+}
+body >.info{
+    padding:var(--padding);
+}
+.info .metadat{
+    margin:var(--padding);
+}
+.info .metadat .hashtag{
+    display:flex;
+    font-size: var(--font-small);
+    color:var(--blue-color);
+}
+.info .metadat .hashtag li{
+    margin-right: var(--padding);
+}
+.info .metadat .titleandButton{
+    display:flex;
+}
+.info .metadat .titleandButton .title{
+    font-size: var(--font-large);
+    margin-right: var(--padding);
+}
+.info .metadat .titleandButton .title.clamp{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.info .metadat .titleandButton .moreBtn{
+    height:100%;
+    transition: transform 300ms ease-in-out;
+}
+.info .metadat .titleandButton .moreBtn.clicked{
+    transform: rotate(180deg);
+}
+.info .views{
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+.info .actions{
+    display: flex;
+    justify-content: space-around;
+    margin: var(--padding) 0px;
+}
+.info .actions button{
+    display: flex;
+    flex-direction: column;  
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+
+}
+.info .actions button i{
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding) / 2);
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+}
+.info .actions button i.active{
+    color:var(--blue-color)
+}
+.info > .channel{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color);
+}
+
+.info .channel .metadata{
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-small) 0;
+    
+}
+.info .channel .metadata img{
+    width: var(--avatar-size);
+    height: var(--avatar-size) ;
+    border-radius: 50%;
+    margin-right: var(--padding);
+}
+.info .channel .metadata .info{
+    display: flex;
+    flex-direction: column;
+}
+.info .channel .metadata .name{
+    font-size: var(--font-medium);
+
+}
+.info .channel .metadata .subscribers{
+    font-size:var(--font-small);
+    color: var(--grey-light-color);
+}
+.info .channel .subscribe{
+    text-transform: uppercase;
+    color: var(--red-color);
+    font-size: var(--font-medium);
+}
+
+/* upNext */
+.upNext{
+    padding: 0 var(--padding);
+}
+.upNext > .title{
+    font-size: var(--font-medium);
+    color:var(--grey-dark-color);
+    margin-bottom: calc(var(--padding)/2);
+}
+.upNext .itme{
+    display: flex;
+    margin-top: var(--padding);
+}
+.upNext .itme .img{
+    flex-basis: 35%;
+    margin-right:var(--padding);
+}
+.upNext .itme .img img{
+    width: 100%;
+}
+
+.upNext .itme .info{
+    flex-basis: 60%;
+}
+.upNext .itme .moreBtn{
+    height:100%;
+    flex-basis: 5%;
+}
+.upNext .itme .info{
+    display: flex;
+    flex-direction: column;
+    /* margin-left: var(--padding); */
+}
+.upNext .itme .info .title{
+    font-size: var(--font-small);
+}
+.upNext .itme .info .name, 
+.upNext .itme .info .view{
+    font-size: var(--font-micro);
+    color:var(--grey-dark-color);
+}
+
+.infoAndupNext{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width:768px){
+    .infoAndupNext{
+        flex-direction: row;
+        margin: var(--padding) 0;
+    }
+}
