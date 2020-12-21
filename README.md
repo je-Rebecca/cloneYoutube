@@ -1,6 +1,5 @@
 # cloneYoutube
-clone youtube layout. 
-
+clone youtube layout(responsive web design) 
 
 :sparkles: mobile img    
 ![mobile](https://user-images.githubusercontent.com/67889991/102763219-5c95eb00-4347-11eb-950a-8fda552da057.JPG)
